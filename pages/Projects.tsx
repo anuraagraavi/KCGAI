@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Section, SectionHeader, Button, Card, GlassCard } from '../components/Components';
 import { 
@@ -19,9 +18,6 @@ const Projects = () => {
     if (location.hash) {
       if (location.hash === '#ongoing') setActiveTab('Ongoing');
       if (location.hash === '#completed') setActiveTab('Completed');
-      
-      const el = document.getElementById(location.hash.replace('#', ''));
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
   }, [location]);
 

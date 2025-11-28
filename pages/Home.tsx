@@ -1,21 +1,10 @@
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Section, SectionHeader, Button, Card, GlassCard, Badge, StatCard } from '../components/Components';
 import { KEY_STATS, FEATURED_PROJECTS, CAPABILITIES, NEWS, EXECUTION_VOLUME, CLIENT_LIST, JOBS, BACKGROUNDS } from '../constants';
 import { ArrowRight, CheckCircle2, Award, Briefcase, Zap, Shield, Users, Trophy } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 
 const Home = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
+  // Hash scrolling is now handled globally in App.tsx
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
@@ -103,7 +92,12 @@ const Home = () => {
           
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
-               <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Construction Site" className="w-full h-auto object-cover" />
+               <img 
+                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" 
+                 alt="Construction Site" 
+                 className="w-full h-auto object-cover" 
+                 loading="lazy"
+               />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                   <div className="text-white">
                      <p className="font-bold text-lg">Excellence in Execution</p>
@@ -140,6 +134,7 @@ const Home = () => {
                  src={project.image} 
                  alt={project.title} 
                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:brightness-75" 
+                 loading="lazy"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 transition-opacity"></div>
                
@@ -234,7 +229,12 @@ const Home = () => {
       <Section id="quality" className="bg-white p-0" overlay={false}>
          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
             <div className="relative bg-gray-900 overflow-hidden order-2 md:order-1">
-               <img src={BACKGROUNDS.safety} className="absolute inset-0 w-full h-full object-cover opacity-60 hover:scale-105 transition-transform duration-1000" alt="Safety" />
+               <img 
+                 src={BACKGROUNDS.safety} 
+                 className="absolute inset-0 w-full h-full object-cover opacity-60 hover:scale-105 transition-transform duration-1000" 
+                 alt="Safety" 
+                 loading="lazy"
+               />
                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
                <div className="relative z-10 p-12 h-full flex flex-col justify-center">
                   <Badge color="orange">Safety First</Badge>
@@ -295,7 +295,12 @@ const Home = () => {
           {NEWS.map((item) => (
             <div key={item.id} className="group cursor-pointer flex flex-col gap-4">
               <div className="w-full h-64 rounded-xl overflow-hidden relative">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  loading="lazy"
+                />
                 <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                    {item.source}
                 </div>

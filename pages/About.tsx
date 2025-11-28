@@ -1,8 +1,6 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Section, SectionHeader, Card, GlassCard, Button, Badge } from '../components/Components';
 import { Target, Users, HardHat, ShieldCheck, Scale, History, Award, CheckCircle2, Factory, Eye, FileText, ChevronDown, ChevronUp } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 import { 
   BACKGROUNDS, 
   MACHINERY_LIST, 
@@ -15,16 +13,8 @@ import {
 } from '../constants';
 
 const About = () => {
-  const location = useLocation();
   const [showQualityPolicy, setShowQualityPolicy] = useState(false);
   const [showSafetyPolicy, setShowSafetyPolicy] = useState(false);
-
-  useEffect(() => {
-    if (location.hash) {
-      const el = document.getElementById(location.hash.replace('#', ''));
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [location]);
 
   return (
     <div className="bg-white">
@@ -83,7 +73,12 @@ const About = () => {
             </div>
             <div className="lg:col-span-6 relative">
                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" className="w-full h-auto" alt="Team" />
+                   <img 
+                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" 
+                     className="w-full h-auto" 
+                     alt="Team" 
+                     loading="lazy"
+                   />
                </div>
                <div className="absolute -bottom-6 -left-6 bg-accent-500 p-6 rounded-lg shadow-xl hidden md:block">
                   <p className="text-white font-bold text-lg">Infrastructure <br/>Specialists</p>
@@ -97,7 +92,12 @@ const About = () => {
          <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
                <div className="md:w-2/5 relative min-h-[300px]">
-                  <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover" alt="Chadalawada Sridhar" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop" 
+                    className="absolute inset-0 w-full h-full object-cover" 
+                    alt="Chadalawada Sridhar" 
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-primary-900/10"></div>
                </div>
                <div className="md:w-3/5 p-10 md:p-16 flex flex-col justify-center">
@@ -110,7 +110,7 @@ const About = () => {
                      “At Kakatiya Constructions, we believe in building not just structures, but trust. Our journey over the last two decades has been guided by responsibility, precision, and a commitment to the communities we serve. Every project we deliver is a reflection of our values—quality, integrity, and long-term vision.”
                   </blockquote>
                   <div className="flex items-center">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" className="h-10 opacity-50" />
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" className="h-10 opacity-50" loading="lazy" />
                   </div>
                </div>
             </div>
@@ -181,7 +181,7 @@ const About = () => {
                </div>
             </div>
             <div className="relative h-full min-h-[400px]">
-               <img src={BACKGROUNDS.quality} className="rounded-2xl shadow-2xl object-cover w-full h-full" alt="Quality Control" />
+               <img src={BACKGROUNDS.quality} className="rounded-2xl shadow-2xl object-cover w-full h-full" alt="Quality Control" loading="lazy" />
                <div className="absolute inset-0 bg-primary-900/20 rounded-2xl"></div>
             </div>
          </div>
@@ -192,8 +192,8 @@ const About = () => {
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
                 <div className="grid grid-cols-2 gap-4">
-                   <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-48 object-cover" alt="Safety 1" />
-                   <img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=600&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-48 object-cover mt-8" alt="Safety 2" />
+                   <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-48 object-cover" alt="Safety 1" loading="lazy" />
+                   <img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=600&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-48 object-cover mt-8" alt="Safety 2" loading="lazy" />
                 </div>
             </div>
             <div className="order-1 lg:order-2">

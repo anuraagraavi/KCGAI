@@ -1,3 +1,5 @@
+import { ComponentType, SVGProps } from 'react';
+
 export interface Project {
   id: string;
   title: string;
@@ -12,7 +14,7 @@ export interface Project {
 export interface Stat {
   label: string;
   value: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 export interface NavItem {

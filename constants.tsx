@@ -34,7 +34,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop', // Construction Crane
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80', // Crane
       title: '24+ Years of Excellence',
       desc: 'Building public infrastructure since 1999.',
       link: '/about'
@@ -58,7 +58,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1587351021759-3e566b9af923?q=80&w=600&auto=format&fit=crop', // Building
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80', // Corporate Building
       title: 'Landmark Projects',
       desc: 'View our signature healthcare & education projects.',
       link: '/projects'
@@ -76,7 +76,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop', // Team Meeting
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80', // Team
       title: 'Build Your Future',
       desc: 'Grow with a team that values commitment.',
       link: '/careers'
@@ -104,23 +104,23 @@ export const KEY_STATS: Stat[] = [
   { label: 'Skilled Professionals', value: '150+', icon: Users },
 ];
 
-// High quality Unsplash images with reliable IDs
+// Reliable Unsplash Image IDs
 const IMAGES = {
-  hospital_gandhi: 'https://images.unsplash.com/photo-1587351021759-3e566b9af923?q=80&w=1200&auto=format&fit=crop', 
-  hospital_sathupally: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop',
-  college_khammam: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop',
-  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
-  infra_generic: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ce84ac?q=80&w=1200&auto=format&fit=crop',
-  news1: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop', 
-  news2: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=800&auto=format&fit=crop',
+  hospital_gandhi: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80', 
+  hospital_sathupally: 'https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=1200&q=80',
+  college_khammam: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
+  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
+  infra_generic: 'https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1200&q=80',
+  news1: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', 
+  news2: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=800&q=80',
   // Backgrounds
-  hero_bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2560&auto=format&fit=crop', // Crane
-  machinery_bg: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?q=80&w=2560&auto=format&fit=crop', // Machinery
-  safety_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2560&auto=format&fit=crop', // Hard hat
-  contact_bg: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2560&auto=format&fit=crop', // Building Abstract
-  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop', // Office
-  quality_bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2000&auto=format&fit=crop', // Blueprint
-  careers_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2560&auto=format&fit=crop' // Construction Worker
+  hero_bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2560&q=80', // Crane
+  machinery_bg: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?auto=format&fit=crop&w=2560&q=80', // Machinery
+  safety_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2560&q=80', // Hard hat
+  contact_bg: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2560&q=80', // Abstract Building
+  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2560&q=80', // Office
+  quality_bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=2560&q=80', // Blueprint
+  careers_bg: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2560&q=80' // Team Meeting / Handshake
 };
 
 export const BACKGROUNDS = {
@@ -366,34 +366,34 @@ export const CAREER_OPPORTUNITIES = [
     title: 'Senior Project Engineer',
     experience: '5–7 years',
     description: 'Responsible for site execution, project coordination, quality control, and ensuring adherence to engineering standards.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop' // Crane
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80' // Crane
   },
   {
     id: '2',
     title: 'Quantity Surveyor',
     experience: '5+ years',
     description: 'Responsible for preparing BOQs, cost estimation, billing, coordinating with engineering and accounts, and managing measurement sheets.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop' // Calculator/Plans
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80' // Calculator/Plans
   },
   {
     id: '3',
     title: 'Assistant Project Manager',
     experience: '7+ years',
     description: 'Supports overall site execution, manages timelines, supervises site engineers, and ensures compliance with quality and safety requirements.',
-    image: 'https://images.unsplash.com/photo-1507208773393-40275f9f8e07?q=80&w=800&auto=format&fit=crop' // Engineer on site
+    image: 'https://images.unsplash.com/photo-1507208773393-40275f9f8e07?auto=format&fit=crop&w=800&q=80' // Engineer on site
   },
   {
     id: '4',
     title: 'Project Manager',
     experience: '10–12+ years',
     description: 'Oversees end-to-end project delivery, interfaces with government departments, manages contractors, ensures compliance, and leads site teams.',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop' // Meeting
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80' // Meeting
   },
   {
     id: '5',
     title: 'Mechanical Engineer',
     experience: '5+ years',
     description: 'Manages mechanical works including HVAC, plumbing, fire systems, equipment installation, and coordination with civil teams.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800&auto=format&fit=crop' // Blueprints
+    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80' // Blueprints
   },
 ];

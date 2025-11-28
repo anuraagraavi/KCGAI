@@ -1,4 +1,3 @@
-
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -124,7 +123,7 @@ export const Badge: React.FC<{ children: ReactNode; color?: 'green' | 'orange' |
   );
 };
 
-export const StatCard: React.FC<{ label: string; value: string; icon?: React.ComponentType<any> }> = ({ label, value, icon: Icon }) => (
+export const StatCard: React.FC<{ label: string; value: string; icon?: React.ElementType }> = ({ label, value, icon: Icon }) => (
   <div className="flex flex-col items-center justify-center p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg text-center hover:bg-white/10 transition-colors">
     {Icon && <Icon className="w-8 h-8 text-accent-500 mb-3" />}
     <span className="text-3xl md:text-4xl font-bold text-white mb-1">{value}</span>

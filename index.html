@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kakatiya Constructions</title>
+    <link rel="icon" type="image/png" href="/fevicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,20 @@
             },
             backgroundImage: {
               'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
             }
           }
         }
@@ -58,6 +73,13 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      
+      /* Fix for mobile parallax */
+      @media (max-width: 768px) {
+        .parallax {
+          background-attachment: scroll;
+        }
+      }
 
       /* Custom scrollbar */
       ::-webkit-scrollbar {
@@ -69,6 +91,12 @@
       ::-webkit-scrollbar-thumb {
         background: #059669;
         border-radius: 3px;
+      }
+      
+      /* Animation Utilities */
+      .animate-marquee {
+        display: flex;
+        width: max-content;
       }
     </style>
   <script type="importmap">
