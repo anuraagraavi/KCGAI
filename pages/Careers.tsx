@@ -6,10 +6,17 @@ import { CAREER_OPPORTUNITIES, BACKGROUNDS } from '../constants';
 
 const Careers = () => {
   const [formState, setFormState] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [fileName, setFileName] = useState<string | null>(null);
 
   const scrollToForm = () => {
     const el = document.getElementById('application-form');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFileName(e.target.files[0].name);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,6 +26,7 @@ const Careers = () => {
     // Simulate API call
     setTimeout(() => {
       setFormState('success');
+      setFileName(null);
       // Reset after showing success message
       setTimeout(() => setFormState('idle'), 5000);
     }, 2000);
@@ -180,10 +188,12 @@ const Careers = () => {
                         <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
                               <Upload className="w-8 h-8 mb-3 text-gray-400" />
-                              <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+                              <p className="mb-2 text-sm text-gray-500">
+                                {fileName ? <span className="text-primary-600 font-bold">{fileName}</span> : <><span className="font-semibold">Click to upload</span> or drag and drop</>}
+                              </p>
                               <p className="text-xs text-gray-500">PDF, DOC (MAX. 5MB)</p>
                            </div>
-                           <input type="file" className="hidden" />
+                           <input type="file" className="hidden" onChange={handleFileChange} accept=".pdf,.doc,.docx" />
                         </label>
                      </div>
                   </div>

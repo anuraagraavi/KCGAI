@@ -23,7 +23,8 @@ const Projects = () => {
   }, [location]);
 
   const currentList = activeTab === 'Ongoing' ? ONGOING_PROJECTS_LIST : COMPLETED_PROJECTS_LIST;
-  const totalValue = currentList.reduce((acc, curr) => acc + parseFloat(curr.value), 0).toFixed(2);
+  // Audit Fix: Added (|| '0') to ensure parseFloat handles optional strings/undefined safely
+  const totalValue = currentList.reduce((acc, curr) => acc + (parseFloat(curr.value || '0') || 0), 0).toFixed(2);
 
   return (
     <div className="bg-gray-50 flex flex-col w-full overflow-hidden">

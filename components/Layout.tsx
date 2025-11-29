@@ -1,15 +1,17 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
 import { NAV_ITEMS, MEGA_MENU_DATA } from '../constants';
 import { Button } from './Components';
 
+// External hosted logos
+const logoMain = 'https://i.ibb.co/x8t1gH4Y/logo.png';
+const logoWhite = 'https://i.ibb.co/DgsgRqpN/logo-w.png';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const [logoError, setLogoError] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
@@ -61,17 +63,12 @@ const Navbar = () => {
           
           {/* LOGO */}
           <Link to="/" className="flex items-center group relative z-50">
-             {logoError ? (
-               <span className={`text-2xl font-display font-bold uppercase tracking-widest ${scrolled ? 'text-primary-800' : 'text-white'}`}>Kakatiya</span>
-             ) : (
-               <img 
-                 src={scrolled ? "/media/logo_main.png" : "/media/logo_white.png"} 
-                 alt="Kakatiya Constructions" 
-                 className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
-                 style={{ maxHeight: '64px', maxWidth: '200px' }} 
-                 onError={() => setLogoError(true)}
-               />
-             )}
+             <img 
+               src={scrolled ? logoMain : logoWhite}
+               alt="Kakatiya Constructions" 
+               className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+               style={{ maxHeight: '64px', maxWidth: '200px' }} 
+             />
           </Link>
 
           {/* DESKTOP NAV (MEGA MENU) */}
@@ -218,8 +215,6 @@ const Navbar = () => {
 };
 
 const Footer = () => {
-  const [logoError, setLogoError] = useState(false);
-  
   return (
     <footer className="bg-gray-950 text-white border-t border-gray-900 relative overflow-hidden">
       {/* Background Pattern */}
@@ -233,24 +228,24 @@ const Footer = () => {
           {/* Column 1: Brand (4 cols) */}
           <div className="lg:col-span-4 space-y-8">
              <Link to="/" className="inline-block mb-2">
-                {logoError ? (
-                  <span className="text-3xl font-display font-bold uppercase tracking-widest text-white">Kakatiya</span>
-                ) : (
                   <img 
-                     src="/media/logo_white.png" 
+                     src={logoWhite}
                      alt="Kakatiya Constructions" 
-                     className="h-24 w-auto object-contain"
+                     className="h-20 w-auto object-contain"
                      style={{ maxWidth: '240px' }} 
-                     onError={() => setLogoError(true)}
                   />
-                )}
              </Link>
              <p className="text-gray-400 leading-relaxed text-sm pr-6">
                Since 1999, Kakatiya Constructions has been a trusted partner in building Telangana's public infrastructure. From hospitals to residential schools, we deliver quality with precision.
              </p>
              <div className="flex space-x-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white hover:border-primary-500 transition-all">
+                {[
+                  { Icon: Facebook, label: 'Facebook' },
+                  { Icon: Twitter, label: 'Twitter' },
+                  { Icon: Linkedin, label: 'LinkedIn' },
+                  { Icon: Instagram, label: 'Instagram' }
+                ].map(({ Icon, label }, i) => (
+                  <a key={i} href="#" aria-label={label} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white hover:border-primary-500 transition-all">
                     <Icon size={18} />
                   </a>
                 ))}

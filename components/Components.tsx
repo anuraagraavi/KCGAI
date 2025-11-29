@@ -134,31 +134,31 @@ export const StatCard: React.FC<{ label: string; value: string; icon?: React.Ele
   </div>
 );
 
+// Helper component for fallback images
+const ImageWithFallback = ({ src, alt, className }: { src: string, alt: string, className: string }) => {
+  const [error, setError] = useState(false);
+  
+  if (error) {
+    return (
+      <div className={`flex items-center justify-center bg-gray-200 text-gray-500 font-bold text-xs uppercase p-2 text-center rounded ${className}`} style={{height: '64px', width: 'auto', minWidth: '100px'}}>
+        {alt}
+      </div>
+    );
+  }
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className} 
+      title={alt}
+      onError={() => setError(true)}
+    />
+  );
+};
+
 // --- NEW GLOBAL CLIENT TRUSTED SECTION WITH FALLBACK ---
 export const ClientTrustedSection: React.FC = () => {
-  // Use a fallback component for images that fail to load
-  const ImageWithFallback = ({ src, alt, className }: { src: string, alt: string, className: string }) => {
-    const [error, setError] = useState(false);
-    
-    if (error) {
-      return (
-        <div className={`flex items-center justify-center bg-gray-200 text-gray-500 font-bold text-xs uppercase p-2 text-center rounded ${className}`} style={{height: '64px', width: 'auto', minWidth: '100px'}}>
-          {alt}
-        </div>
-      );
-    }
-    
-    return (
-      <img 
-        src={src} 
-        alt={alt} 
-        className={className} 
-        title={alt}
-        onError={() => setError(true)}
-      />
-    );
-  };
-
   return (
     <div className="bg-gray-50 py-16 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 text-center mb-10">

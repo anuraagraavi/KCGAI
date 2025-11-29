@@ -197,17 +197,19 @@ export const EXECUTION_VOLUME = [
   { label: 'Brickwork', value: '1.78', unit: 'lakh m³' },
 ];
 
-// Client Logos - Assumes files are present in public/media/ folder based on user prompt
+// Client Logos - Using hosted external images
 export const CLIENT_LOGOS = [
-  { name: 'TSMSIDC', src: '/media/tsmsidc.png' },
-  { name: 'TSEWIDC', src: '/media/tsewidc.png' },
-  { name: 'TWEIDC', src: '/media/tweidc.png' },
-  { name: 'TMREIS', src: '/media/tmreis.png' },
-  { name: 'CPWD', src: '/media/cpwd.png' },
-  { name: 'Roads & Buildings Dept', src: '/media/rb.png' },
-  { name: 'Tribal Welfare', src: '/media/tribal_welfare.png' },
-  { name: 'ANGRAU', src: '/media/angrau.png' },
-  { name: 'Telangana Govt.', src: '/media/telangana_govt.png' }
+  { name: 'Government of Telangana', src: 'https://i.ibb.co/fGKkpqzL/got-telangana.png' },
+  { name: 'Government of Andhra Pradesh', src: 'https://i.ibb.co/0jxYn3zB/got-ap.png' },
+  { name: 'Client Partner 3', src: 'https://i.ibb.co/kVL5Y7b1/client-3.png' },
+  { name: 'Client Partner 4', src: 'https://i.ibb.co/wN2N2XDh/client-4.png' },
+  { name: 'Client Partner 5', src: 'https://i.ibb.co/JWMJZzbb/client-5.png' },
+  { name: 'Client Partner 6', src: 'https://i.ibb.co/ksgPLNpT/client-6.png' },
+  { name: 'Client Partner 7', src: 'https://i.ibb.co/7xsXnHBb/client-7.png' },
+  { name: 'Client Partner 8', src: 'https://i.ibb.co/rKRH7BPL/client-8.png' },
+  { name: 'Client Partner 9', src: 'https://i.ibb.co/C3L22tVV/client-9.png' },
+  { name: 'Client Partner 10', src: 'https://i.ibb.co/Rkhz5zGm/client-10.png' },
+  { name: 'Client Partner 11', src: 'https://i.ibb.co/8LGyxPwH/client-11.png' }
 ];
 
 export const CLIENT_LIST = CLIENT_LOGOS.map(c => c.name);
@@ -354,15 +356,15 @@ export const EXECUTION_STATS_TABLE = [
   { id: 4, name: 'Brick Work', unit: 'Cum.', quantity: '11,25,264.00' },
   { id: 5, name: 'Plastering', unit: 'Sqm.', quantity: '25,11,662.00' },
   { id: 6, name: 'Flooring', unit: 'Sqm.', quantity: '17,52,514.00' },
-  { id: 7, name: 'Electrical', unit: 'rs', quantity: '40crores' },
-  { id: 8, name: 'Sanitary & plumbing', unit: 'rs', quantity: '30crore' },
+  { id: 7, name: 'Electrical', unit: 'INR', quantity: '40,00,00,000+' },
+  { id: 8, name: 'Sanitary & plumbing', unit: 'INR', quantity: '30,00,00,000+' },
   { id: 9, name: 'Painting', unit: 'SFT', quantity: '25,64,520.00' },
   { id: 10, name: 'ACP Cladding', unit: 'SFT', quantity: '2,20,225.00' },
 ];
 
 export const TEAM_STATS_TABLE = [
   { id: 1, role: 'Project Managers', count: 7 },
-  { id: 2, role: 'ASSISTANT PROJECT MANAGERS', count: 5 },
+  { id: 2, role: 'Assistant Project Managers', count: 5 },
   { id: 3, role: 'Engineers', count: 5 },
   { id: 4, role: 'Technical Consultants', count: 3 },
   { id: 5, role: 'Quantity surveyor', count: 2 },
