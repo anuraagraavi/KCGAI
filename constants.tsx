@@ -14,33 +14,33 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 // --- ULTIMATE IMAGE SOURCE ---
-// Verified High-Availability Unsplash IDs
+// Verified High-Availability Unsplash IDs (Stable 2024)
 const IMAGES = {
   // Projects
-  hospital_gandhi: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80', // Modern Hospital Facade
-  hospital_sathupally: 'https://images.unsplash.com/photo-1587351021759-3e566b9af955?auto=format&fit=crop&w=800&q=80', // Hospital Building
-  college_khammam: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80', // College Campus
-  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80', // School Building
-  infra_generic: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', // High rise/Infra
+  hospital_gandhi: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80', // Modern Hospital
+  hospital_sathupally: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80', // Hospital Building
+  college_khammam: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80', // College/University
+  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80', // School
+  infra_generic: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80', // Modern Building
   
   // News
-  news1: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80', // Construction worker with hardhat
-  news2: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=600&q=80', // Blueprints and tablet
+  news1: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80', // Construction Site
+  news2: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80', // Blueprints
   
   // Backgrounds - High Res
-  hero_bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80', // Construction Crane Sky
-  machinery_bg: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?auto=format&fit=crop&w=1920&q=80', // Industrial Machine
-  safety_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80', // Worker in Vest
-  contact_bg: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80', // Architecture Abstract
-  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80', // Corporate Office
-  quality_bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=80', // Blueprints close up
-  careers_bg: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80', // Handshake/Team
+  hero_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80', // Construction Crane
+  machinery_bg: 'https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&w=1920&q=80', // Heavy Machinery
+  safety_bg: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80', // Safety Vest
+  contact_bg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80', // Corporate Building
+  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80', // Office Interior
+  quality_bg: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1920&q=80', // Quality Check
+  careers_bg: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80', // Team Meeting
   
-  // Careers Cards
-  career_engineer: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80', // Engineer in workshop
-  career_surveyor: 'https://images.unsplash.com/photo-1574755866822-262aa9608226?auto=format&fit=crop&w=600&q=80', // Surveyor site
-  career_manager: 'https://images.unsplash.com/photo-1507208773393-40d9fc9df43d?auto=format&fit=crop&w=600&q=80', // Man with helmet reading plans
-  career_mech: 'https://images.unsplash.com/photo-1531297461136-82lw63220409?auto=format&fit=crop&w=600&q=80', // Tech/Mech
+  // Careers Cards (Stable Professional Images)
+  career_engineer: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?auto=format&fit=crop&w=600&q=80', // Engineer
+  career_surveyor: 'https://images.unsplash.com/photo-1574755866822-262aa9608226?auto=format&fit=crop&w=600&q=80', // Surveyor
+  career_manager: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80', // Manager
+  career_mech: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=600&q=80', // Mechanical
 };
 
 export const BACKGROUNDS = {
@@ -197,17 +197,17 @@ export const EXECUTION_VOLUME = [
   { label: 'Brickwork', value: '1.78', unit: 'lakh m³' },
 ];
 
-// Client Logos - Assumes files are present in public/
+// Client Logos - Assumes files are present in public/media/ folder based on user prompt
 export const CLIENT_LOGOS = [
-  { name: 'TSMSIDC', src: '/tsmsidc.svg' },
-  { name: 'TSEWIDC', src: '/tsewidc.svg' },
-  { name: 'TWEIDC', src: '/tweidc.svg' },
-  { name: 'TMREIS', src: '/tmreis.svg' },
-  { name: 'CPWD', src: '/cpwd.svg' },
-  { name: 'Roads & Buildings Dept', src: '/rb.svg' },
-  { name: 'Tribal Welfare', src: '/tribal_welfare.svg' },
-  { name: 'ANGRAU', src: '/angrau.svg' },
-  { name: 'Telangana Govt.', src: '/telangana_govt.svg' }
+  { name: 'TSMSIDC', src: '/media/tsmsidc.png' },
+  { name: 'TSEWIDC', src: '/media/tsewidc.png' },
+  { name: 'TWEIDC', src: '/media/tweidc.png' },
+  { name: 'TMREIS', src: '/media/tmreis.png' },
+  { name: 'CPWD', src: '/media/cpwd.png' },
+  { name: 'Roads & Buildings Dept', src: '/media/rb.png' },
+  { name: 'Tribal Welfare', src: '/media/tribal_welfare.png' },
+  { name: 'ANGRAU', src: '/media/angrau.png' },
+  { name: 'Telangana Govt.', src: '/media/telangana_govt.png' }
 ];
 
 export const CLIENT_LIST = CLIENT_LOGOS.map(c => c.name);

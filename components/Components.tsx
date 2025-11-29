@@ -1,5 +1,5 @@
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CLIENT_LOGOS } from '../constants';
 
@@ -133,8 +133,31 @@ export const StatCard: React.FC<{ label: string; value: string; icon?: React.Ele
   </div>
 );
 
-// --- NEW GLOBAL CLIENT TRUSTED SECTION ---
+// --- NEW GLOBAL CLIENT TRUSTED SECTION WITH FALLBACK ---
 export const ClientTrustedSection: React.FC = () => {
+  // Use a fallback component for images that fail to load
+  const ImageWithFallback = ({ src, alt, className }: { src: string, alt: string, className: string }) => {
+    const [error, setError] = useState(false);
+    
+    if (error) {
+      return (
+        <div className={`flex items-center justify-center bg-gray-200 text-gray-500 font-bold text-xs uppercase p-2 text-center rounded ${className}`} style={{height: '64px', width: 'auto', minWidth: '100px'}}>
+          {alt}
+        </div>
+      );
+    }
+    
+    return (
+      <img 
+        src={src} 
+        alt={alt} 
+        className={className} 
+        title={alt}
+        onError={() => setError(true)}
+      />
+    );
+  };
+
   return (
     <div className="bg-gray-50 py-16 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 text-center mb-10">
@@ -145,11 +168,10 @@ export const ClientTrustedSection: React.FC = () => {
           {/* Duplicate list for seamless loop */}
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((client, i) => (
             <div key={i} className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-              <img 
+              <ImageWithFallback 
                 src={client.src} 
                 alt={client.name} 
                 className="h-16 md:h-20 w-auto object-contain" 
-                title={client.name}
               />
             </div>
           ))}

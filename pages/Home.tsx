@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Section, SectionHeader, Button, Card, GlassCard, Badge, StatCard, ClientTrustedSection } from '../components/Components';
 import { KEY_STATS, FEATURED_PROJECTS, CAPABILITIES, NEWS, EXECUTION_VOLUME, JOBS, BACKGROUNDS } from '../constants';
@@ -302,7 +301,7 @@ const Home = () => {
       </Section>
 
       {/* 8. CAREERS */}
-      <Section id="careers" className="bg-gray-900 text-white relative overflow-hidden">
+      <Section id="careers" dark className="relative overflow-hidden">
          {/* Abstract BG Shapes */}
          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-900/20 to-transparent pointer-events-none"></div>
          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-600/10 rounded-full blur-3xl pointer-events-none"></div>

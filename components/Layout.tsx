@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [logoError, setLogoError] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
@@ -60,12 +61,17 @@ const Navbar = () => {
           
           {/* LOGO */}
           <Link to="/" className="flex items-center group relative z-50">
-             <img
-               src={scrolled ? "/logo_main.svg" : "/logo_white.svg"}
-               alt="Kakatiya Constructions"
-               className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
-               style={{ maxHeight: '64px', maxWidth: '200px' }} // Strict constraints to prevent cropping
-             />
+             {logoError ? (
+               <span className={`text-2xl font-display font-bold uppercase tracking-widest ${scrolled ? 'text-primary-800' : 'text-white'}`}>Kakatiya</span>
+             ) : (
+               <img 
+                 src={scrolled ? "/media/logo_main.png" : "/media/logo_white.png"} 
+                 alt="Kakatiya Constructions" 
+                 className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+                 style={{ maxHeight: '64px', maxWidth: '200px' }} 
+                 onError={() => setLogoError(true)}
+               />
+             )}
           </Link>
 
           {/* DESKTOP NAV (MEGA MENU) */}
@@ -91,7 +97,7 @@ const Navbar = () => {
                   {/* MEGA MENU DROPDOWN - FIXED POSITIONING TO PREVENT OVERFLOW */}
                   {hasMegaMenu && (
                     <div 
-                      className={`fixed left-0 w-screen pt-4 transition-all duration-300 origin-top z-[100] ${menuTopClass} ${hoveredItem === item.label ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                      className={`fixed inset-x-0 pt-4 transition-all duration-300 origin-top z-[100] ${menuTopClass} ${hoveredItem === item.label ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
@@ -212,6 +218,8 @@ const Navbar = () => {
 };
 
 const Footer = () => {
+  const [logoError, setLogoError] = useState(false);
+  
   return (
     <footer className="bg-gray-950 text-white border-t border-gray-900 relative overflow-hidden">
       {/* Background Pattern */}
@@ -225,12 +233,17 @@ const Footer = () => {
           {/* Column 1: Brand (4 cols) */}
           <div className="lg:col-span-4 space-y-8">
              <Link to="/" className="inline-block mb-2">
-                <img
-                   src="/logo_white.svg"
-                   alt="Kakatiya Constructions"
-                   className="h-24 w-auto object-contain"
-                   style={{ maxWidth: '240px' }}
-                />
+                {logoError ? (
+                  <span className="text-3xl font-display font-bold uppercase tracking-widest text-white">Kakatiya</span>
+                ) : (
+                  <img 
+                     src="/media/logo_white.png" 
+                     alt="Kakatiya Constructions" 
+                     className="h-24 w-auto object-contain"
+                     style={{ maxWidth: '240px' }} 
+                     onError={() => setLogoError(true)}
+                  />
+                )}
              </Link>
              <p className="text-gray-400 leading-relaxed text-sm pr-6">
                Since 1999, Kakatiya Constructions has been a trusted partner in building Telangana's public infrastructure. From hospitals to residential schools, we deliver quality with precision.
