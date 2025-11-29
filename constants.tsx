@@ -13,6 +13,46 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', path: '/contact' },
 ];
 
+// --- ULTIMATE IMAGE SOURCE ---
+// Verified High-Availability Unsplash IDs
+const IMAGES = {
+  // Projects
+  hospital_gandhi: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80', // Modern Hospital Facade
+  hospital_sathupally: 'https://images.unsplash.com/photo-1587351021759-3e566b9af955?auto=format&fit=crop&w=800&q=80', // Hospital Building
+  college_khammam: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80', // College Campus
+  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80', // School Building
+  infra_generic: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', // High rise/Infra
+  
+  // News
+  news1: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80', // Construction worker with hardhat
+  news2: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=600&q=80', // Blueprints and tablet
+  
+  // Backgrounds - High Res
+  hero_bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80', // Construction Crane Sky
+  machinery_bg: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?auto=format&fit=crop&w=1920&q=80', // Industrial Machine
+  safety_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80', // Worker in Vest
+  contact_bg: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80', // Architecture Abstract
+  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80', // Corporate Office
+  quality_bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=80', // Blueprints close up
+  careers_bg: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80', // Handshake/Team
+  
+  // Careers Cards
+  career_engineer: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80', // Engineer in workshop
+  career_surveyor: 'https://images.unsplash.com/photo-1574755866822-262aa9608226?auto=format&fit=crop&w=600&q=80', // Surveyor site
+  career_manager: 'https://images.unsplash.com/photo-1507208773393-40d9fc9df43d?auto=format&fit=crop&w=600&q=80', // Man with helmet reading plans
+  career_mech: 'https://images.unsplash.com/photo-1531297461136-82lw63220409?auto=format&fit=crop&w=600&q=80', // Tech/Mech
+};
+
+export const BACKGROUNDS = {
+  hero: IMAGES.hero_bg,
+  capabilities: IMAGES.machinery_bg,
+  safety: IMAGES.safety_bg,
+  contact: IMAGES.contact_bg,
+  office: IMAGES.office_bg,
+  quality: IMAGES.quality_bg,
+  careers: IMAGES.careers_bg
+};
+
 export const MEGA_MENU_DATA = {
   'About Us': {
     sections: [
@@ -34,7 +74,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80', // Crane
+      image: IMAGES.hero_bg, 
       title: '24+ Years of Excellence',
       desc: 'Building public infrastructure since 1999.',
       link: '/about'
@@ -58,7 +98,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80', // Corporate Building
+      image: IMAGES.hospital_gandhi,
       title: 'Landmark Projects',
       desc: 'View our signature healthcare & education projects.',
       link: '/projects'
@@ -76,7 +116,7 @@ export const MEGA_MENU_DATA = {
       }
     ],
     featured: {
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80', // Team
+      image: IMAGES.career_manager,
       title: 'Build Your Future',
       desc: 'Grow with a team that values commitment.',
       link: '/careers'
@@ -103,35 +143,6 @@ export const KEY_STATS: Stat[] = [
   { label: 'Years Experience', value: '24+', icon: HardHat },
   { label: 'Skilled Professionals', value: '150+', icon: Users },
 ];
-
-// Reliable Unsplash Image IDs
-const IMAGES = {
-  hospital_gandhi: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80', 
-  hospital_sathupally: 'https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=1200&q=80',
-  college_khammam: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
-  school_residential: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
-  infra_generic: 'https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1200&q=80',
-  news1: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', 
-  news2: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=800&q=80',
-  // Backgrounds
-  hero_bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2560&q=80', // Crane
-  machinery_bg: 'https://images.unsplash.com/photo-1581094794329-cd1361d78639?auto=format&fit=crop&w=2560&q=80', // Machinery
-  safety_bg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2560&q=80', // Hard hat
-  contact_bg: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2560&q=80', // Abstract Building
-  office_bg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2560&q=80', // Office
-  quality_bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=2560&q=80', // Blueprint
-  careers_bg: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2560&q=80' // Team Meeting / Handshake
-};
-
-export const BACKGROUNDS = {
-  hero: IMAGES.hero_bg,
-  capabilities: IMAGES.machinery_bg,
-  safety: IMAGES.safety_bg,
-  contact: IMAGES.contact_bg,
-  office: IMAGES.office_bg,
-  quality: IMAGES.quality_bg,
-  careers: IMAGES.careers_bg
-};
 
 export const FEATURED_PROJECTS: Project[] = [
   {
@@ -186,9 +197,20 @@ export const EXECUTION_VOLUME = [
   { label: 'Brickwork', value: '1.78', unit: 'lakh m³' },
 ];
 
-export const CLIENT_LIST = [
-  'TSMSIDC', 'TSEWIDC', 'TWEIDC', 'TMREIS', 'CPWD', 'Roads & Buildings Dept', 'Tribal Welfare', 'ANGRAU', 'Telangana Govt.'
+// Client Logos - Assumes files are present in public/
+export const CLIENT_LOGOS = [
+  { name: 'TSMSIDC', src: '/tsmsidc.png' },
+  { name: 'TSEWIDC', src: '/tsewidc.png' },
+  { name: 'TWEIDC', src: '/tweidc.png' },
+  { name: 'TMREIS', src: '/tmreis.png' },
+  { name: 'CPWD', src: '/cpwd.png' },
+  { name: 'Roads & Buildings Dept', src: '/rb.png' },
+  { name: 'Tribal Welfare', src: '/tribal_welfare.png' },
+  { name: 'ANGRAU', src: '/angrau.png' },
+  { name: 'Telangana Govt.', src: '/telangana_govt.png' }
 ];
+
+export const CLIENT_LIST = CLIENT_LOGOS.map(c => c.name);
 
 export const PROJECTS_DATA: Project[] = [
   ...FEATURED_PROJECTS,
@@ -237,8 +259,6 @@ export const NEWS: NewsItem[] = [
     image: IMAGES.news2
   },
 ];
-
-// --- NEW DATA FOR ABOUT PAGE ---
 
 export const MACHINERY_LIST = [
   { id: 1, name: 'Ajax', unit: '2 Cum', quantity: "4 No's" },
@@ -292,8 +312,6 @@ export const SAFETY_POLICY_FULL = `For Kakatiya Constructions, the role of Healt
 5. To ensure safe handling in use of dangerous substances.
 6. To provide and ensure safe and healthy working conditions.
 7. To minimize damage to the environment at all project sites and promote sustainable practices.`;
-
-// --- NEW DATA FOR PROJECTS TABLE FORMAT ---
 
 export const ONGOING_PROJECTS_LIST = [
   { id: 1, name: 'Construction of new Teaching Hospital at Mahabubabad in Mahabubabad District.', client: 'TGMSIDC', value: '156.60' },
@@ -358,42 +376,40 @@ export const TEAM_STATS_TABLE = [
   { id: 13, role: 'Unskilled Workers', count: 150 },
 ];
 
-// --- CAREERS DATA ---
-
 export const CAREER_OPPORTUNITIES = [
   {
     id: '1',
     title: 'Senior Project Engineer',
     experience: '5–7 years',
     description: 'Responsible for site execution, project coordination, quality control, and ensuring adherence to engineering standards.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80' // Crane
+    image: IMAGES.career_engineer
   },
   {
     id: '2',
     title: 'Quantity Surveyor',
     experience: '5+ years',
     description: 'Responsible for preparing BOQs, cost estimation, billing, coordinating with engineering and accounts, and managing measurement sheets.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80' // Calculator/Plans
+    image: IMAGES.career_surveyor
   },
   {
     id: '3',
     title: 'Assistant Project Manager',
     experience: '7+ years',
     description: 'Supports overall site execution, manages timelines, supervises site engineers, and ensures compliance with quality and safety requirements.',
-    image: 'https://images.unsplash.com/photo-1507208773393-40275f9f8e07?auto=format&fit=crop&w=800&q=80' // Engineer on site
+    image: IMAGES.career_manager
   },
   {
     id: '4',
     title: 'Project Manager',
     experience: '10–12+ years',
     description: 'Oversees end-to-end project delivery, interfaces with government departments, manages contractors, ensures compliance, and leads site teams.',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80' // Meeting
+    image: IMAGES.career_manager
   },
   {
     id: '5',
     title: 'Mechanical Engineer',
     experience: '5+ years',
     description: 'Manages mechanical works including HVAC, plumbing, fire systems, equipment installation, and coordination with civil teams.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80' // Blueprints
+    image: IMAGES.career_mech
   },
 ];

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, ArrowRight, Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
@@ -63,6 +64,7 @@ const Navbar = () => {
                src={scrolled ? "/logo_main.png" : "/logo_white.png"} 
                alt="Kakatiya Constructions" 
                className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+               style={{ maxHeight: '64px', maxWidth: '200px' }} // Strict constraints to prevent cropping
              />
           </Link>
 
@@ -226,7 +228,8 @@ const Footer = () => {
                 <img 
                    src="/logo_white.png" 
                    alt="Kakatiya Constructions" 
-                   className="h-24 w-auto object-contain" 
+                   className="h-24 w-auto object-contain"
+                   style={{ maxWidth: '240px' }} 
                 />
              </Link>
              <p className="text-gray-400 leading-relaxed text-sm pr-6">

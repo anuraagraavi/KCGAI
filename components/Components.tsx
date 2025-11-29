@@ -1,5 +1,7 @@
+
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { CLIENT_LOGOS } from '../constants';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'white';
@@ -130,3 +132,32 @@ export const StatCard: React.FC<{ label: string; value: string; icon?: React.Ele
     <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">{label}</span>
   </div>
 );
+
+// --- NEW GLOBAL CLIENT TRUSTED SECTION ---
+export const ClientTrustedSection: React.FC = () => {
+  return (
+    <div className="bg-gray-50 py-16 border-y border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 text-center mb-10">
+        <h3 className="text-xl font-bold text-gray-400 uppercase tracking-widest">Trusted by Leading Government Institutions</h3>
+      </div>
+      <div className="overflow-hidden whitespace-nowrap relative">
+        <div className="flex animate-marquee space-x-16 items-center">
+          {/* Duplicate list for seamless loop */}
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((client, i) => (
+            <div key={i} className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+              <img 
+                src={client.src} 
+                alt={client.name} 
+                className="h-16 md:h-20 w-auto object-contain" 
+                title={client.name}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-10">
+        <Button to="/projects" variant="text" size="sm">View All Client Relationships</Button>
+      </div>
+    </div>
+  );
+};

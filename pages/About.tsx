@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Section, SectionHeader, Card, GlassCard, Button, Badge } from '../components/Components';
+import { Section, SectionHeader, Card, GlassCard, Button, Badge, ClientTrustedSection } from '../components/Components';
 import { Target, Users, HardHat, ShieldCheck, Scale, History, Award, CheckCircle2, Factory, Eye, FileText, ChevronDown, ChevronUp } from 'lucide-react';
 import { 
   BACKGROUNDS, 
@@ -8,8 +9,7 @@ import {
   QUALITY_POINTS, 
   SAFETY_POINTS, 
   QUALITY_POLICY_FULL, 
-  SAFETY_POLICY_FULL,
-  CLIENT_LIST
+  SAFETY_POLICY_FULL
 } from '../constants';
 
 const About = () => {
@@ -293,17 +293,8 @@ const About = () => {
          </div>
       </Section>
 
-      {/* 9. CLIENTS WE SERVE */}
-      <Section id="clients" className="bg-gray-50">
-         <SectionHeader title="Trusted by Government Institutions" center />
-         <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-5xl mx-auto">
-             {CLIENT_LIST.map((client, i) => (
-                <div key={i} className="bg-white border border-gray-200 px-6 py-3 rounded-full shadow-sm text-gray-600 font-bold hover:text-primary-600 hover:border-primary-200 transition-all cursor-default">
-                   {client}
-                </div>
-             ))}
-         </div>
-      </Section>
+      {/* 9. CLIENTS WE SERVE - NOW USING GLOBAL COMPONENT */}
+      <ClientTrustedSection />
 
       {/* 10. CALL TO ACTION */}
       <Section className="bg-primary-900 text-white text-center py-20">

@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Section, SectionHeader, Button, Card, GlassCard } from '../components/Components';
+import { Section, SectionHeader, Button, Card, GlassCard, ClientTrustedSection } from '../components/Components';
 import { 
   ONGOING_PROJECTS_LIST, 
   COMPLETED_PROJECTS_LIST, 
@@ -212,6 +213,9 @@ const Projects = () => {
 
          </div>
       </Section>
+
+      {/* NEW: CLIENTS SECTION */}
+      <ClientTrustedSection />
 
       {/* SECTION 7 – CTA */}
       <Section className="bg-white text-center py-24">

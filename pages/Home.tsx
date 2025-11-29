@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { Section, SectionHeader, Button, Card, GlassCard, Badge, StatCard } from '../components/Components';
-import { KEY_STATS, FEATURED_PROJECTS, CAPABILITIES, NEWS, EXECUTION_VOLUME, CLIENT_LIST, JOBS, BACKGROUNDS } from '../constants';
+import { Section, SectionHeader, Button, Card, GlassCard, Badge, StatCard, ClientTrustedSection } from '../components/Components';
+import { KEY_STATS, FEATURED_PROJECTS, CAPABILITIES, NEWS, EXECUTION_VOLUME, JOBS, BACKGROUNDS } from '../constants';
 import { ArrowRight, CheckCircle2, Award, Briefcase, Zap, Shield, Users, Trophy } from 'lucide-react';
 
 const Home = () => {
@@ -265,24 +266,8 @@ const Home = () => {
          </div>
       </Section>
 
-      {/* 6. CLIENT TRUST (Ticker/Grid) */}
-      <div className="bg-gray-50 py-16 border-y border-gray-200">
-         <div className="max-w-7xl mx-auto px-4 text-center mb-10">
-            <h3 className="text-xl font-bold text-gray-400 uppercase tracking-widest">Trusted by Leading Government Institutions</h3>
-         </div>
-         <div className="overflow-hidden whitespace-nowrap relative">
-             <div className="flex animate-marquee space-x-16 items-center">
-                 {[...CLIENT_LIST, ...CLIENT_LIST].map((client, i) => (
-                    <span key={i} className="text-2xl md:text-3xl font-display font-bold text-gray-300 hover:text-primary-600 transition-colors cursor-default">
-                       {client}
-                    </span>
-                 ))}
-             </div>
-         </div>
-         <div className="text-center mt-10">
-            <Button to="/projects" variant="text" size="sm">View All Client Relationships</Button>
-         </div>
-      </div>
+      {/* 6. CLIENT TRUST (Ticker/Grid) - NOW USING GLOBAL COMPONENT */}
+      <ClientTrustedSection />
 
       {/* 7. MEDIA & NEWS */}
       <Section id="media" className="bg-white">
