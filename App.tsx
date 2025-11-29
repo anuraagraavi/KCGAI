@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout';
@@ -6,13 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
-
-const Media = () => (
-  <div className="py-24 text-center">
-    <h1 className="text-4xl font-bold mb-4">Media Center</h1>
-    <p>News and Updates coming soon.</p>
-  </div>
-);
+import Media from './pages/Media';
 
 const Legal = () => (
   <div className="py-24 max-w-3xl mx-auto px-4">

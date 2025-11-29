@@ -11,13 +11,25 @@ const Home = () => {
     <div className="flex flex-col w-full overflow-hidden">
       
       {/* 1. HERO SECTION */}
-      <div className="relative h-screen min-h-[600px] flex items-center">
-        {/* Parallax Background */}
-        <div 
-          className="absolute inset-0 z-0 bg-fixed bg-center bg-cover"
-          style={{ backgroundImage: `url('${BACKGROUNDS.hero}')` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/60 to-transparent"></div>
+      <div className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* Fallback Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${BACKGROUNDS.hero})` }}
+          ></div>
+          
+          <iframe 
+            className="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover pointer-events-none md:w-[150%] md:h-[150%]"
+            src="https://www.youtube.com/embed/xzA8mDhlySQ?autoplay=1&mute=1&loop=1&playlist=xzA8mDhlySQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1" 
+            title="Konstruc Construction" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen
+          ></iframe>
+          {/* Overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/70 to-gray-900/20"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
