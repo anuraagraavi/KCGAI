@@ -60,9 +60,9 @@ const Navbar = () => {
           
           {/* LOGO */}
           <Link to="/" className="flex items-center group relative z-50">
-             <img 
-               src={scrolled ? "/logo_main.png" : "/logo_white.png"} 
-               alt="Kakatiya Constructions" 
+             <img
+               src={scrolled ? "/logo_main.svg" : "/logo_white.svg"}
+               alt="Kakatiya Constructions"
                className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
                style={{ maxHeight: '64px', maxWidth: '200px' }} // Strict constraints to prevent cropping
              />
@@ -225,11 +225,11 @@ const Footer = () => {
           {/* Column 1: Brand (4 cols) */}
           <div className="lg:col-span-4 space-y-8">
              <Link to="/" className="inline-block mb-2">
-                <img 
-                   src="/logo_white.png" 
-                   alt="Kakatiya Constructions" 
+                <img
+                   src="/logo_white.svg"
+                   alt="Kakatiya Constructions"
                    className="h-24 w-auto object-contain"
-                   style={{ maxWidth: '240px' }} 
+                   style={{ maxWidth: '240px' }}
                 />
              </Link>
              <p className="text-gray-400 leading-relaxed text-sm pr-6">

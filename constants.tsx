@@ -199,15 +199,15 @@ export const EXECUTION_VOLUME = [
 
 // Client Logos - Assumes files are present in public/
 export const CLIENT_LOGOS = [
-  { name: 'TSMSIDC', src: '/tsmsidc.png' },
-  { name: 'TSEWIDC', src: '/tsewidc.png' },
-  { name: 'TWEIDC', src: '/tweidc.png' },
-  { name: 'TMREIS', src: '/tmreis.png' },
-  { name: 'CPWD', src: '/cpwd.png' },
-  { name: 'Roads & Buildings Dept', src: '/rb.png' },
-  { name: 'Tribal Welfare', src: '/tribal_welfare.png' },
-  { name: 'ANGRAU', src: '/angrau.png' },
-  { name: 'Telangana Govt.', src: '/telangana_govt.png' }
+  { name: 'TSMSIDC', src: '/tsmsidc.svg' },
+  { name: 'TSEWIDC', src: '/tsewidc.svg' },
+  { name: 'TWEIDC', src: '/tweidc.svg' },
+  { name: 'TMREIS', src: '/tmreis.svg' },
+  { name: 'CPWD', src: '/cpwd.svg' },
+  { name: 'Roads & Buildings Dept', src: '/rb.svg' },
+  { name: 'Tribal Welfare', src: '/tribal_welfare.svg' },
+  { name: 'ANGRAU', src: '/angrau.svg' },
+  { name: 'Telangana Govt.', src: '/telangana_govt.svg' }
 ];
 
 export const CLIENT_LIST = CLIENT_LOGOS.map(c => c.name);
