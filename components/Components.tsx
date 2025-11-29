@@ -68,7 +68,8 @@ export const Section: React.FC<SectionProps> = ({
     : {};
   
   const parallaxClass = backgroundImage ? 'parallax relative' : '';
-  const bgColor = dark ? 'bg-gray-900 text-white' : 'bg-white text-gray-800';
+  // Added !bg-gray-900 to ensure dark mode overrides any conflicting defaults
+  const bgColor = dark ? '!bg-gray-900 text-white' : 'bg-white text-gray-800';
   const minHeight = fullScreen ? 'min-h-screen flex items-center' : 'py-24';
   
   return (

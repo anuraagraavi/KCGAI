@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Section, SectionHeader, Card, GlassCard, Button, Badge, ClientTrustedSection } from '../components/Components';
 import { Target, Users, HardHat, ShieldCheck, Scale, History, Award, CheckCircle2, Factory, Eye, FileText, ChevronDown, ChevronUp } from 'lucide-react';
@@ -116,8 +117,8 @@ const About = () => {
          </div>
       </Section>
 
-      {/* 4. VISION & MISSION */}
-      <Section id="values" dark className="relative">
+      {/* 4. VISION & MISSION - EXPLICIT BG CLASS ADDED */}
+      <Section id="values" dark className="relative bg-gray-900">
          {/* BG Pattern */}
          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '30px 30px' }}></div>
          
